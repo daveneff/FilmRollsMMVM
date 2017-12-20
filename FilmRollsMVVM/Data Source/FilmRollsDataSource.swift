@@ -20,7 +20,6 @@ final class FilmRollsDataSource: NSObject {
   init(realm: Realm) {
     self.realm = realm
     super.init()
-    makeMockTableData()
   }
 }
 
@@ -54,15 +53,5 @@ extension FilmRollsDataSource: UITableViewDataSource {
     }
   
     return cell
-  }
-}
-
-// MARK: - Mock Data Generation
-extension FilmRollsDataSource {
-  func makeMockTableData() {
-//    tableData = [
-//      FilmRollCellViewModel(filmRoll: FilmRoll(name: "Kodak Portra 400", speed: 400, exposureCount: 24, type: "Color")),
-//      FilmRollCellViewModel(filmRoll: FilmRoll(name: "Kodak Tri-X 200", speed: 200, exposureCount: 36 , type: "Black & White"))
-//    ]
   }
 }

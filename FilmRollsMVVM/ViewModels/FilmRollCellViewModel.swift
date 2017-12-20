@@ -17,7 +17,7 @@ struct FilmRollCellViewModel {
   init(filmRoll: FilmRoll) {
     self.name = filmRoll.name
     self.speed = "ISO \(filmRoll.speed)"
-    self.numberOfExposures = "\(filmRoll.exposureCount)"
+    self.numberOfExposures = "\(filmRoll.exposureCount) exposures"
     self.dateCreated = "Created on \(filmRoll.dateCreated.prettyDate)"
   }
 }

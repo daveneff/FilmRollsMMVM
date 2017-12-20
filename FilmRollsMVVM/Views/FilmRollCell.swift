@@ -10,8 +10,9 @@ import UIKit
 
 final class FilmRollCell: UITableViewCell {
   
-  lazy var headerLabel = UILabel()
-  lazy var subtitleLabel = UILabel()
+  private lazy var headerLabel = UILabel()
+  private lazy var subtitleOneLabel = UILabel()
+  private lazy var subtitleTwoLabel = UILabel()
   
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,7 +23,8 @@ final class FilmRollCell: UITableViewCell {
   
   func configure(_ viewModel: FilmRollCellViewModel) {
     headerLabel.text = viewModel.name
-    subtitleLabel.text = viewModel.dateCreated
+    subtitleOneLabel.text = viewModel.speed
+    subtitleTwoLabel.text = viewModel.dateCreated
   }  
 }
 
@@ -31,7 +33,7 @@ extension FilmRollCell {
   private func configureUI() {
     configureLabels()
     
-    [headerLabel, subtitleLabel].forEach {
+    [headerLabel, subtitleOneLabel, subtitleTwoLabel].forEach {
       contentView.addSubview($0)
       $0.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -39,17 +41,21 @@ extension FilmRollCell {
     NSLayoutConstraint.activate([
       headerLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
       headerLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-      subtitleLabel.leadingAnchor.constraint(equalTo: headerLabel.leadingAnchor),
-      subtitleLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 2),
-      subtitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+      subtitleOneLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 2),
+      subtitleOneLabel.leadingAnchor.constraint(equalTo: headerLabel.leadingAnchor),
+      subtitleTwoLabel.leadingAnchor.constraint(equalTo: subtitleOneLabel.leadingAnchor),
+      subtitleTwoLabel.topAnchor.constraint(equalTo: subtitleOneLabel.bottomAnchor, constant: 2),
+      subtitleTwoLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
     ])
   }
   
   private func configureLabels() {
     headerLabel.font = .systemFont(ofSize: 17, weight: .semibold)
     headerLabel.textColor = .black
-    subtitleLabel.font = .systemFont(ofSize: 13, weight: .light)
-    subtitleLabel.textColor = .gray
+    subtitleOneLabel.font = .systemFont(ofSize: 13, weight: .regular)
+    subtitleOneLabel.textColor = .black
+    subtitleTwoLabel.font = .systemFont(ofSize: 13, weight: .regular)
+    subtitleTwoLabel.textColor = .gray
   }
 }
 

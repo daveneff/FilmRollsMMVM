@@ -100,6 +100,7 @@
 		E435F8281FE8A61D00F19016 /* FilmRollsMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				E435F8291FE8A61D00F19016 /* AppDelegate.swift */,
 				E435F83B1FE8A66C00F19016 /* Controllers */,
 				E435F8471FE8AFA300F19016 /* Views */,
 				E435F83D1FE8A67900F19016 /* ViewModels */,
@@ -107,7 +108,6 @@
 				E435F8441FE8AE9D00F19016 /* Protocols */,
 				E41F60171FE990FB00B767F6 /* Data Source */,
 				E498FB851FE99CFB00CAC047 /* Extensions */,
-				E435F8291FE8A61D00F19016 /* AppDelegate.swift */,
 				E435F82D1FE8A61D00F19016 /* Main.storyboard */,
 				E435F8301FE8A61D00F19016 /* Assets.xcassets */,
 				E435F8321FE8A61D00F19016 /* LaunchScreen.storyboard */,
