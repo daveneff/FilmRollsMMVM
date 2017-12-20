@@ -7,29 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15285286BCF7ACDF42983597 /* Pods_FilmRollsMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6734CC8F6A6136818DE54E42 /* Pods_FilmRollsMVVM.framework */; };
+		E41F60161FE98E0C00B767F6 /* FilmRollsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F60151FE98E0C00B767F6 /* FilmRollsDataSource.swift */; };
 		E435F82A1FE8A61D00F19016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435F8291FE8A61D00F19016 /* AppDelegate.swift */; };
-		E435F82C1FE8A61D00F19016 /* FilmRollsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435F82B1FE8A61D00F19016 /* FilmRollsController.swift */; };
+		E435F82C1FE8A61D00F19016 /* FilmRollsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435F82B1FE8A61D00F19016 /* FilmRollsTableViewController.swift */; };
 		E435F82F1FE8A61D00F19016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E435F82D1FE8A61D00F19016 /* Main.storyboard */; };
 		E435F8311FE8A61D00F19016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E435F8301FE8A61D00F19016 /* Assets.xcassets */; };
 		E435F8341FE8A61D00F19016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E435F8321FE8A61D00F19016 /* LaunchScreen.storyboard */; };
 		E435F83F1FE8A72A00F19016 /* FilmRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435F83E1FE8A72A00F19016 /* FilmRoll.swift */; };
-		E435F8411FE8AC0D00F19016 /* FilmRollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435F8401FE8AC0D00F19016 /* FilmRollViewModel.swift */; };
+		E435F8411FE8AC0D00F19016 /* FilmRollCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435F8401FE8AC0D00F19016 /* FilmRollCellViewModel.swift */; };
 		E435F8431FE8ADD200F19016 /* FilmRollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435F8421FE8ADD200F19016 /* FilmRollCell.swift */; };
 		E435F8461FE8AEB200F19016 /* CellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435F8451FE8AEB200F19016 /* CellIdentifiable.swift */; };
+		E498FB841FE9932400CAC047 /* AddFilmRollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498FB831FE9932400CAC047 /* AddFilmRollController.swift */; };
+		E498FB871FE99D1D00CAC047 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498FB861FE99D1D00CAC047 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E958774E7A7CF27F6B7532E /* Pods-FilmRollsMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmRollsMVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-FilmRollsMVVM/Pods-FilmRollsMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		6734CC8F6A6136818DE54E42 /* Pods_FilmRollsMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmRollsMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D81044FE6A8BFE5307411FB /* Pods-FilmRollsMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmRollsMVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FilmRollsMVVM/Pods-FilmRollsMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		E41F60151FE98E0C00B767F6 /* FilmRollsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollsDataSource.swift; sourceTree = "<group>"; };
 		E435F8261FE8A61D00F19016 /* FilmRollsMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmRollsMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E435F8291FE8A61D00F19016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E435F82B1FE8A61D00F19016 /* FilmRollsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollsController.swift; sourceTree = "<group>"; };
+		E435F82B1FE8A61D00F19016 /* FilmRollsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollsTableViewController.swift; sourceTree = "<group>"; };
 		E435F82E1FE8A61D00F19016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E435F8301FE8A61D00F19016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E435F8331FE8A61D00F19016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E435F8351FE8A61D00F19016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E435F83E1FE8A72A00F19016 /* FilmRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRoll.swift; sourceTree = "<group>"; };
-		E435F8401FE8AC0D00F19016 /* FilmRollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollViewModel.swift; sourceTree = "<group>"; };
+		E435F8401FE8AC0D00F19016 /* FilmRollCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollCellViewModel.swift; sourceTree = "<group>"; };
 		E435F8421FE8ADD200F19016 /* FilmRollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollCell.swift; sourceTree = "<group>"; };
 		E435F8451FE8AEB200F19016 /* CellIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiable.swift; sourceTree = "<group>"; };
+		E498FB831FE9932400CAC047 /* AddFilmRollController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFilmRollController.swift; sourceTree = "<group>"; };
+		E498FB861FE99D1D00CAC047 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +47,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15285286BCF7ACDF42983597 /* Pods_FilmRollsMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C83EA197AFABE8B7CEFCDEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6734CC8F6A6136818DE54E42 /* Pods_FilmRollsMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AE2CC293369EC52BE5BA18B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D81044FE6A8BFE5307411FB /* Pods-FilmRollsMVVM.debug.xcconfig */,
+				1E958774E7A7CF27F6B7532E /* Pods-FilmRollsMVVM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E41F60171FE990FB00B767F6 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				E41F60151FE98E0C00B767F6 /* FilmRollsDataSource.swift */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
 		E435F81D1FE8A61D00F19016 = {
 			isa = PBXGroup;
 			children = (
 				E435F8281FE8A61D00F19016 /* FilmRollsMVVM */,
 				E435F8271FE8A61D00F19016 /* Products */,
+				9AE2CC293369EC52BE5BA18B /* Pods */,
+				0C83EA197AFABE8B7CEFCDEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +105,8 @@
 				E435F83D1FE8A67900F19016 /* ViewModels */,
 				E435F83C1FE8A67300F19016 /* Models */,
 				E435F8441FE8AE9D00F19016 /* Protocols */,
+				E41F60171FE990FB00B767F6 /* Data Source */,
+				E498FB851FE99CFB00CAC047 /* Extensions */,
 				E435F8291FE8A61D00F19016 /* AppDelegate.swift */,
 				E435F82D1FE8A61D00F19016 /* Main.storyboard */,
 				E435F8301FE8A61D00F19016 /* Assets.xcassets */,
@@ -79,7 +119,8 @@
 		E435F83B1FE8A66C00F19016 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E435F82B1FE8A61D00F19016 /* FilmRollsController.swift */,
+				E435F82B1FE8A61D00F19016 /* FilmRollsTableViewController.swift */,
+				E498FB831FE9932400CAC047 /* AddFilmRollController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,7 +136,7 @@
 		E435F83D1FE8A67900F19016 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E435F8401FE8AC0D00F19016 /* FilmRollViewModel.swift */,
+				E435F8401FE8AC0D00F19016 /* FilmRollCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -116,6 +157,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E498FB851FE99CFB00CAC047 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E498FB861FE99D1D00CAC047 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E435F8381FE8A61D00F19016 /* Build configuration list for PBXNativeTarget "FilmRollsMVVM" */;
 			buildPhases = (
+				E0F20E1CBA2B7A88EDBF71C0 /* [CP] Check Pods Manifest.lock */,
 				E435F8221FE8A61D00F19016 /* Sources */,
 				E435F8231FE8A61D00F19016 /* Frameworks */,
 				E435F8241FE8A61D00F19016 /* Resources */,
+				277E99E73FAF5FF405BB793C /* [CP] Embed Pods Frameworks */,
+				A70C824BABC7AF6292F9DDCD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,17 +235,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		277E99E73FAF5FF405BB793C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FilmRollsMVVM/Pods-FilmRollsMVVM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FilmRollsMVVM/Pods-FilmRollsMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A70C824BABC7AF6292F9DDCD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FilmRollsMVVM/Pods-FilmRollsMVVM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0F20E1CBA2B7A88EDBF71C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FilmRollsMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E435F8221FE8A61D00F19016 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E435F82C1FE8A61D00F19016 /* FilmRollsController.swift in Sources */,
+				E41F60161FE98E0C00B767F6 /* FilmRollsDataSource.swift in Sources */,
+				E435F82C1FE8A61D00F19016 /* FilmRollsTableViewController.swift in Sources */,
+				E498FB871FE99D1D00CAC047 /* Date+Extensions.swift in Sources */,
 				E435F8461FE8AEB200F19016 /* CellIdentifiable.swift in Sources */,
 				E435F8431FE8ADD200F19016 /* FilmRollCell.swift in Sources */,
+				E498FB841FE9932400CAC047 /* AddFilmRollController.swift in Sources */,
 				E435F82A1FE8A61D00F19016 /* AppDelegate.swift in Sources */,
 				E435F83F1FE8A72A00F19016 /* FilmRoll.swift in Sources */,
-				E435F8411FE8AC0D00F19016 /* FilmRollViewModel.swift in Sources */,
+				E435F8411FE8AC0D00F19016 /* FilmRollCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +439,7 @@
 		};
 		E435F8391FE8A61D00F19016 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D81044FE6A8BFE5307411FB /* Pods-FilmRollsMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -344,6 +456,7 @@
 		};
 		E435F83A1FE8A61D00F19016 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E958774E7A7CF27F6B7532E /* Pods-FilmRollsMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

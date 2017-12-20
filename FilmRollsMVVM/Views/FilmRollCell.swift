@@ -18,9 +18,9 @@ final class FilmRollCell: UITableViewCell {
     configureUI()
   }
   
-  required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+  required init?(coder aDecoder: NSCoder) { fatalError() }
   
-  func configure(_ viewModel: FilmRollViewModel) {
+  func configure(_ viewModel: FilmRollCellViewModel) {
     headerLabel.text = viewModel.name
     subtitleLabel.text = viewModel.dateCreated
   }  
@@ -31,10 +31,9 @@ extension FilmRollCell {
   private func configureUI() {
     configureLabels()
     
-    [headerLabel, subtitleLabel]
-      .forEach {
-        contentView.addSubview($0)
-        $0.translatesAutoresizingMaskIntoConstraints = false
+    [headerLabel, subtitleLabel].forEach {
+      contentView.addSubview($0)
+      $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
     NSLayoutConstraint.activate([
@@ -49,7 +48,7 @@ extension FilmRollCell {
   private func configureLabels() {
     headerLabel.font = .systemFont(ofSize: 17, weight: .semibold)
     headerLabel.textColor = .black
-    subtitleLabel.font = .systemFont(ofSize: 12, weight: .light)
+    subtitleLabel.font = .systemFont(ofSize: 13, weight: .light)
     subtitleLabel.textColor = .gray
   }
 }
