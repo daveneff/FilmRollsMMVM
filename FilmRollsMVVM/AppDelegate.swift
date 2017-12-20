@@ -18,13 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
     window = UIWindow()
-
-    do {
-      realm = try Realm()
-    } catch {
-      fatalError("Realm instantiation failed")
-    }
-    print(realm.configuration.fileURL!)
+    realm = try! Realm()
     
     let rootViewController = FilmRollsTableViewController(realm: realm)
     window?.rootViewController = UINavigationController(rootViewController: rootViewController)

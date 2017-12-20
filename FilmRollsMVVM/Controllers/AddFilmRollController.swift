@@ -10,59 +10,54 @@ import UIKit
 
 final class AddFilmRollController: UIViewController {
   
+  // MARK: - Properties
   lazy var nameTextField = UITextField()
   lazy var exposuresTextField = UITextField()
   lazy var speedTextField = UITextField()
   lazy var typeTextField = UITextField()
-  
   lazy var button = UIButton(frame: CGRect(x: 0, y: 0, width: 140, height: 40))
   
+  // MARK: - Callback
   var onFilmRollAdded: ((FilmRoll) -> Void)?
   
+  // MARK: - View lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "Add New Film Roll"
-    view.backgroundColor = .lightGray
-    configureTextFields()
-    configureButton()
-    configureModalDismiss()
+    configureUI()
+    configureModalDismissNavBarButton()
   }
 }
 
 // MARK: - Action
 extension AddFilmRollController {
   
-  // Capture textField values and callback with FilmRoll object
   @objc func onAddButtonTapped() {
     let name = nameTextField.text ?? "Default Camera Name"
     let speed = Int(speedTextField.text ?? "") ?? 400
     let exposureCount = Int(exposuresTextField.text ?? "") ?? 24
     let type = typeTextField.text ?? "Default: Black & White"
-    
+
     let filmRoll = FilmRoll(name: name,
                             speed: speed,
                             exposureCount: exposureCount,
                             type: type)
-    
-    onFilmRollAdded?(filmRoll)
-    
-    self.dismiss(animated: true)
-  }
-}
 
-// MARK: - Modal dismissal
-extension AddFilmRollController {
-  private func configureModalDismiss() {
-    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(onDismissTapped))
-  }
-  
-  @objc func onDismissTapped() {
+    onFilmRollAdded?(filmRoll)
+
     self.dismiss(animated: true)
   }
 }
 
 // MARK: - UI Configuartion
 extension AddFilmRollController {
+  
+  private func configureUI() {
+    title = "Add New Film Roll"
+    view.backgroundColor = .lightGray
+    configureTextFields()
+    configureButton()
+  }
+  
   private func configureTextFields() {
     nameTextField.placeholder = "Film Roll Name"
     exposuresTextField.placeholder = "Exposure Count (Ex: 24)"

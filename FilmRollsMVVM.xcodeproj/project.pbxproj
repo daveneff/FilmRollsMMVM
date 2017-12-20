@@ -20,6 +20,8 @@
 		E435F8461FE8AEB200F19016 /* CellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E435F8451FE8AEB200F19016 /* CellIdentifiable.swift */; };
 		E498FB841FE9932400CAC047 /* AddFilmRollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498FB831FE9932400CAC047 /* AddFilmRollController.swift */; };
 		E498FB871FE99D1D00CAC047 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498FB861FE99D1D00CAC047 /* Date+Extensions.swift */; };
+		E498FB911FEA104B00CAC047 /* AddFilmRollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498FB901FEA104B00CAC047 /* AddFilmRollViewModel.swift */; };
+		E498FB931FEA176E00CAC047 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E498FB921FEA176E00CAC047 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		E435F8451FE8AEB200F19016 /* CellIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiable.swift; sourceTree = "<group>"; };
 		E498FB831FE9932400CAC047 /* AddFilmRollController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFilmRollController.swift; sourceTree = "<group>"; };
 		E498FB861FE99D1D00CAC047 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		E498FB901FEA104B00CAC047 /* AddFilmRollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFilmRollViewModel.swift; sourceTree = "<group>"; };
+		E498FB921FEA176E00CAC047 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,15 +106,15 @@
 			children = (
 				E435F8291FE8A61D00F19016 /* AppDelegate.swift */,
 				E435F83B1FE8A66C00F19016 /* Controllers */,
-				E435F8471FE8AFA300F19016 /* Views */,
 				E435F83D1FE8A67900F19016 /* ViewModels */,
+				E435F8471FE8AFA300F19016 /* Views */,
 				E435F83C1FE8A67300F19016 /* Models */,
-				E435F8441FE8AE9D00F19016 /* Protocols */,
 				E41F60171FE990FB00B767F6 /* Data Source */,
+				E435F8441FE8AE9D00F19016 /* Protocols */,
 				E498FB851FE99CFB00CAC047 /* Extensions */,
 				E435F82D1FE8A61D00F19016 /* Main.storyboard */,
-				E435F8301FE8A61D00F19016 /* Assets.xcassets */,
 				E435F8321FE8A61D00F19016 /* LaunchScreen.storyboard */,
+				E435F8301FE8A61D00F19016 /* Assets.xcassets */,
 				E435F8351FE8A61D00F19016 /* Info.plist */,
 			);
 			path = FilmRollsMVVM;
@@ -137,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				E435F8401FE8AC0D00F19016 /* FilmRollCellViewModel.swift */,
+				E498FB901FEA104B00CAC047 /* AddFilmRollViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				E498FB861FE99D1D00CAC047 /* Date+Extensions.swift */,
+				E498FB921FEA176E00CAC047 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,7 +308,9 @@
 				E435F8461FE8AEB200F19016 /* CellIdentifiable.swift in Sources */,
 				E435F8431FE8ADD200F19016 /* FilmRollCell.swift in Sources */,
 				E498FB841FE9932400CAC047 /* AddFilmRollController.swift in Sources */,
+				E498FB931FEA176E00CAC047 /* UIViewController+Extensions.swift in Sources */,
 				E435F82A1FE8A61D00F19016 /* AppDelegate.swift in Sources */,
+				E498FB911FEA104B00CAC047 /* AddFilmRollViewModel.swift in Sources */,
 				E435F83F1FE8A72A00F19016 /* FilmRoll.swift in Sources */,
 				E435F8411FE8AC0D00F19016 /* FilmRollCellViewModel.swift in Sources */,
 			);

@@ -11,15 +11,18 @@ import RealmSwift
 
 final class FilmRollsTableViewController: UITableViewController {
 
+  // MARK: - Properties
   private let realm: Realm
   private lazy var dataSource = FilmRollsDataSource(realm: realm)
   
+  // MARK: - View lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     configureTableView()
     configureNavigationItems()
   }
   
+  // MARK: - Init
   init(realm: Realm) {
     self.realm = realm
     super.init(nibName: nil, bundle: nil)
@@ -43,7 +46,6 @@ extension FilmRollsTableViewController {
 
 // MARK: - Action
 extension FilmRollsTableViewController {
-  
   @objc func onAddButtonTapped() {
     let vc = AddFilmRollController()
     vc.onFilmRollAdded = self.onFilmRollAdded

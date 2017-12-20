@@ -8,6 +8,7 @@
 
 import UIKit
 
+//  Protocol which assigns a default unique identifier to any cell which adopts it
 protocol CellIdentifiable where Self: UITableViewCell {
   static var identifier: String { get }
 }

@@ -10,21 +10,22 @@ import UIKit
 import RealmSwift
 
 final class FilmRollsDataSource: NSObject {
-
-  private let realm: Realm
   
+  // MARK: - Properties
+  private let realm: Realm
   private var tableData: [FilmRoll] {
     return Array(realm.objects(FilmRoll.self))
   }
-  
+
+  // MARK: - Init
   init(realm: Realm) {
     self.realm = realm
-    super.init()
   }
 }
 
 // MARK: - Saving
 extension FilmRollsDataSource {
+  
   func save(filmRoll: FilmRoll, completion: (() -> Void)? = nil) {
     do {
       try realm.write {
@@ -37,8 +38,9 @@ extension FilmRollsDataSource {
   }
 }
 
-// MARK: - Data Source
+// MARK: - Table view data source
 extension FilmRollsDataSource: UITableViewDataSource {
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return tableData.count
   }

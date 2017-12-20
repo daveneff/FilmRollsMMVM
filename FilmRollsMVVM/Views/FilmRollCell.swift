@@ -10,10 +10,12 @@ import UIKit
 
 final class FilmRollCell: UITableViewCell {
   
+  // MARK: - Properties
   private lazy var headerLabel = UILabel()
   private lazy var subtitleOneLabel = UILabel()
   private lazy var subtitleTwoLabel = UILabel()
   
+  // MARK: - Init
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     configureUI()
@@ -21,15 +23,20 @@ final class FilmRollCell: UITableViewCell {
   
   required init?(coder aDecoder: NSCoder) { fatalError() }
   
+  // MARK: - Configuration
   func configure(_ viewModel: FilmRollCellViewModel) {
     headerLabel.text = viewModel.name
     subtitleOneLabel.text = viewModel.speed
     subtitleTwoLabel.text = viewModel.dateCreated
-  }  
+  }
 }
 
-// MARK: - Configuration
+// MARK: - Identifier
+extension FilmRollCell: CellIdentifiable { }
+
+// MARK: - UI Configuration
 extension FilmRollCell {
+  
   private func configureUI() {
     configureLabels()
     
@@ -58,6 +65,3 @@ extension FilmRollCell {
     subtitleTwoLabel.textColor = .gray
   }
 }
-
-// MARK: - Identifier
-extension FilmRollCell: CellIdentifiable { }

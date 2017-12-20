@@ -11,7 +11,7 @@ import Foundation
 extension Date {
   public var prettyDate: String {
     let formatter = DateFormatter()
-    formatter.dateFormat = "MMMM d, Y"
+    formatter.dateFormat = "MMMM d, yyyy h:mm a"
     return formatter.string(from: self)
   }
 }
