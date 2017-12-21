@@ -6,7 +6,7 @@ Simple test app playing with MVVM and Realm using programmatic UI in Swift 4.
 
 # Installation
 1. Make sure you have [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) installed
-2. Run `pod install` in Terminal in the project's root directory  
+2. Run `pod update` in Terminal in the project's root directory  
 3. Open `FilmRollsMMVM.xcworkspace`
 
 # Learning MVVM
