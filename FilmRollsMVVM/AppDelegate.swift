@@ -13,17 +13,27 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  var realm: Realm!
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
     window = UIWindow()
-    realm = try! Realm()
     
-    let rootViewController = FilmRollsTableViewController(realm: realm)
+    let rootViewController = FilmRollsTableViewController(dataManager: makeDataManager())
     window?.rootViewController = UINavigationController(rootViewController: rootViewController)
     window?.makeKeyAndVisible()
     
     return true
+  }
+}
+
+// MARK: - Data manager factory
+extension AppDelegate {
+  private func makeDataManager() -> FilmRollsDataManager {
+    do {
+      let realm = try Realm()
+      return FilmRollsDataManager(realm: realm)
+    } catch {
+      fatalError("Data manager instantiation failed")
+    }
   }
 }

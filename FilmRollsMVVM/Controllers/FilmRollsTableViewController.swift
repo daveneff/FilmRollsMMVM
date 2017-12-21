@@ -10,21 +10,21 @@ import UIKit
 import RealmSwift
 
 final class FilmRollsTableViewController: UITableViewController {
-
+  
   // MARK: - Properties
-  private let realm: Realm
-  private lazy var dataSource = FilmRollsDataSource(realm: realm)
+  private let dataManager: FilmRollsDataManager
+  private let viewModel = FilmRollsTableViewModel()
   
   // MARK: - View lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     configureTableView()
-    configureNavigationItems()
+    configureNavBarButtonItems()
   }
   
   // MARK: - Init
-  init(realm: Realm) {
-    self.realm = realm
+  init(dataManager: FilmRollsDataManager) {
+    self.dataManager = dataManager
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -36,10 +36,10 @@ extension FilmRollsTableViewController {
   private func configureTableView() {
     title = "Film Rolls"
     tableView.register(FilmRollCell.classForCoder(), forCellReuseIdentifier: FilmRollCell.identifier)
-    tableView.dataSource = dataSource
+    tableView.dataSource = viewModel
   }
   
-  private func configureNavigationItems() {
+  private func configureNavBarButtonItems() {
     navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(onAddButtonTapped))
   }
 }
@@ -47,14 +47,13 @@ extension FilmRollsTableViewController {
 // MARK: - Action
 extension FilmRollsTableViewController {
   @objc func onAddButtonTapped() {
-    let vc = AddFilmRollController()
-    vc.onFilmRollAdded = self.onFilmRollAdded
-    let controller = UINavigationController(rootViewController: vc)
-    present(controller, animated: true)
+    let controller = AddFilmRollController()
+    controller.onFilmRollAdded = self.onFilmRollAdded
+    present(UINavigationController(rootViewController: controller), animated: true)
   }
   
-  func onFilmRollAdded(filmRoll: FilmRoll) {
-    dataSource.save(filmRoll: filmRoll) {
+  private func onFilmRollAdded(filmRoll: FilmRoll) {
+    dataManager.save(filmRoll: filmRoll) {
       self.tableView.reloadData()
     }
   }

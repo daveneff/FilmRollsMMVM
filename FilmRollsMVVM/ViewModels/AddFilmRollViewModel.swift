@@ -8,7 +8,8 @@
 
 import Foundation
 
-// TODO: - This
+//  TODO: - Abstract AddFilmRoll business logic into ViewModel
+//  Need to figure best way to bind VC to VM -- RxSwift? Manually?
 struct AddFilmRollViewModel {
   
 }
